@@ -8,9 +8,18 @@ function App() {
       <div className={AppStyles.container}>
         <div className={AppStyles.card}>
           <h1 className={AppStyles.title}>Tic-tac-toe Game</h1>
-          
+          <img src={Placeholder} className={AppStyles.image} alt="Tic-tac-toe" />
+          <div className={AppStyles.buttonGroup}>
+              <button>Start</button>
+          </div>
         </div>
-        <div className={AppStyles.card}>a</div>
+        <div className={AppStyles.card}>
+        <h1 className={AppStyles.title}>Valami másik Project</h1>
+          <img src={Placeholder} className={AppStyles.image} alt="" />
+          <div className={AppStyles.buttonGroup}>
+              <button>Start</button>
+          </div>
+        </div>
       </div>
     </>
   )
