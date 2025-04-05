@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin-top:50px;
     box-sizing: border-box;
 }
 .card{
@@ -10,7 +11,7 @@
     display: flex;
     flex-direction: column;;
     width: 50%;
-    background-color: aquamarine;
+    background-color: rgb(77, 78, 78);
     margin-inline: 20px;
     border: black solid 2px;
     border-radius: 5px;
@@ -20,6 +21,7 @@
     text-align: center;
     margin: auto;
     margin-block: 15px;
+    color: white;
 }
 .image{
     margin: auto;
@@ -43,7 +45,8 @@
     color: white;
     text-align: center;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
+    box-shadow: 3px 3px 3px black;
 }
 .buttonGroup button:hover{
     margin: 5px;
@@ -55,5 +58,9 @@
     color: white;
     text-align: center;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    color: white;
 }
