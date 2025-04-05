@@ -9,12 +9,11 @@ const Board = (props) => {
     }, [props.board]);
 
     const handleClick = (index) => {
-        // Check if the game or player is not selected, or if the cell is already filled, or if there is a winner
+
         if (props.game === null || props.player === null || props.board[index] !== ' ' || props.winner) {
-            return; // Do nothing if the game is not started or the cell is filled or there is a winner
+            return; 
         }
 
-        // Update the board with the current player's mark
         const newBoard = [...props.board];
         cellRefs.current[index].classList.add(BoardStyles.rotate);
         newBoard[index] = props.player;
@@ -22,21 +21,12 @@ const Board = (props) => {
             props.setBoard(newBoard);
         },450);
         
+        //checking the winner
 
         
         props.game==='local' ? props.setPlayer(props.player === 'X' ? 'O' : 'X') : null;
 
-        // Check for a winner
-        /*const winnerResult = calculateWinner(newBoard);
-        if (winnerResult) {
-            setWinner(winnerResult);
-        } else if (newBoard.every((cell) => cell !== ' ')) {
-            setWinner('='); // It's a draw
-        } else {
-            // Switch to the other player
-            setPlayer(player2);
-            setPlayer2(player);
-        }*/
+
     };
 
     return (

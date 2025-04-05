@@ -76,7 +76,7 @@
     width: fit-content;
 }
 .disabled {
-    opacity: 0.5; /* Make the cells appear faded */
-    cursor: default; /* Change the cursor to the default arrow */
-    pointer-events: none; /* Prevent any mouse events */
+    opacity: 0.5; 
+    cursor: default; 
+    pointer-events: none; 
 }
