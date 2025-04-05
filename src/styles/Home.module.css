@@ -60,7 +60,11 @@
     font-weight: bold;
     font-size: 20px;
 }
-a{
+.Link{
     text-decoration: none;
     color: white;
+}
+.Link:visited{
+    color: white;
+    text-decoration: none;
 }

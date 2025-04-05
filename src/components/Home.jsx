@@ -11,7 +11,7 @@ const Home = () => {
           <h1 className={HomeStyles.title}>Tic-tac-toe Game</h1>
           <img src={Placeholder} className={HomeStyles.image} alt="Tic-tac-toe" />
           <div className={HomeStyles.buttonGroup}>
-              <button><Link to="/TicTacToe">Start</Link></button>
+              <button><Link className={HomeStyles.Link} to="/TicTacToe">Start</Link></button>
           </div>
         </div>
         <div className={HomeStyles.card}>

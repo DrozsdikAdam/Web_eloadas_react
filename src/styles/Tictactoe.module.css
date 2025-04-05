@@ -1,0 +1,63 @@
+.container{
+    margin: auto;
+    margin-inline: 25px;
+    margin-top: 50px;
+}
+.title{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin: 20px;
+}
+.hidden{
+    display: none;
+}
+.visible{
+    display: block;
+}
+.winner{
+    width: fit-content;
+    text-align: center;
+    padding-block:10px;
+    padding-inline: 20px;
+    color: white;
+    margin: auto;
+    border: 2px dotted pink;
+}
+.buttonGroup{
+    width: fit-content;
+    margin: auto;
+}
+
+.buttonGroup div{
+    margin: auto;
+    width: fit-content;
+}
+.buttonText{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.button{
+    margin: auto;
+    text-align: center;
+    padding-block: 8px;
+    padding-inline: 15px;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 5px;
+    box-shadow: 2px 2px 2px black;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid black;
+    background-color: rgb(85, 142, 156);
+}
+.Link{
+    color: white;
+    text-decoration: none;
+}
+.Link:visited{
+    color: white;
+    text-decoration: none;
+}
