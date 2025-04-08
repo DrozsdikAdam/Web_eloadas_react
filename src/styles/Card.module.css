@@ -1,0 +1,22 @@
+.card {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    border: 1px solid aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+    font-size: 60px;
+    background-color: white;
+    transition: transform 1.5s ease;
+}
+.image{
+    margin: auto;
+    margin-block:15px;
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+}
