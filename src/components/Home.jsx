@@ -19,7 +19,7 @@ const Home = () => {
         <h1 className={HomeStyles.title}>Valami másik Project</h1>
           <img src={Placeholder} className={HomeStyles.image} alt="" />
           <div className={HomeStyles.buttonGroup}>
-              <button>Start</button>
+          <button><Link className={HomeStyles.Link} to="/Memorygame">Start</Link></button>
           </div>
         </div>
       </div>
