@@ -1,29 +1,28 @@
-import React from 'react';
-import A from '../images/A.jfif'
-import B from '../images/B.jpg'
-import C from '../images/C.png'
-import D from '../images/D.jpg'
+import React, {useEffect, useState} from 'react';
 import CardStyles from '../styles/card.module.css'
 
+ const Card = (props) => {
+    const [isFlipped, setIsFlipped] = useState(false);
 
-const Card = (props) => {
+    useEffect(() => {
+      setIsFlipped(false);
+    }, [props.resetTrigger]);
 
-    const imageMap = {
-        A: A,
-        B: B,
-        C: C,
-        D: D,
-    };
+    let cardClassName = `${CardStyles.card}`; 
 
-    const imageSource = imageMap[props.image];
+  if (props.card.status === 'active') {
+    cardClassName += ` ${CardStyles.active}`; 
+  } else if (props.card.status === 'active matched') {
+    cardClassName += ` ${CardStyles.active} ${CardStyles.matched}`; 
+  } else if (props.card.status === 'unmatch') {
+    cardClassName += ` ${CardStyles.unmatch}`; 
+  }
+ 
+    return (
+      <div className={cardClassName} onClick={() => props.clickhandler(props.index)}>
+        <img src={props.card.img} alt={props.card.name} />
+      </div>
+    );
+  }
 
- return(
-    <>
-        <div className={CardStyles.card}>
-            <img src={imageSource} className={CardStyles.image} />
-        </div>
-    </>
- );
-}
-
-export default Card;
+  export default Card;

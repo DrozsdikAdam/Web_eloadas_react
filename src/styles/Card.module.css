@@ -9,14 +9,48 @@
     font-size: 24px;
     cursor: pointer;
     color: black;
-    font-size: 60px;
-    background-color: white;
-    transition: transform 1.5s ease;
+    font-size: 30px;
+    background-color: rgb(0, 140, 255);
+    animation: 2s hideCard linear;
 }
-.image{
+img{
     margin: auto;
     margin-block:15px;
     width: 90%;
     height: 90%;
     object-fit: contain;
+    border-radius: 5px;
+    opacity: 0;
+    animation: 2s hideImage linear;
 }
+
+ 
+  .card.active{
+    transform: rotateY(0);
+  }
+  
+  .card.active img{
+    opacity: 1;
+  }
+  
+  .unmatch{
+      background-color: rgb(240, 28, 28);
+      border-radius: 5px;
+      animation: 2s hideCard linear;
+  }
+  
+  @keyframes hideCard {
+    0%, 70%{
+      transform: rotateX(0deg);
+    }100%{
+      transform: rotateX(180deg);
+    }
+  }
+  
+  @keyframes hideImage {
+    0%, 84%{
+      opacity: 1;
+    }85%{
+      opacity: 0;
+    }
+  }
