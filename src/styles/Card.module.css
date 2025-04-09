@@ -1,56 +1,62 @@
 .card {
-    margin: auto;
-    width: 200px;
-    height: 200px;
-    border: 1px solid aquamarine;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    cursor: pointer;
-    color: black;
-    font-size: 30px;
-    background-color: rgb(0, 140, 255);
-    animation: 2s hideCard linear;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  border: 1px solid aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  color: black;
+  font-size: 30px;
+  background-color: rgb(0, 140, 255);
+  animation: 2s hideCard linear;
+  border-radius: 5px;
 }
-img{
-    margin: auto;
-    margin-block:15px;
-    width: 90%;
-    height: 90%;
-    object-fit: contain;
-    border-radius: 5px;
-    opacity: 0;
-    animation: 2s hideImage linear;
+.picture {
+  margin: auto;
+  margin-block: 15px;
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  border-radius: 5px;
+  opacity: 0;
+  animation: 2s hideImage linear;
 }
 
- 
-  .card.active{
-    transform: rotateY(0);
+.card.active {
+  transform: rotateY(0);
+}
+
+.card.active .picture {
+  opacity: 1;
+}
+.matched {
+  background-color: green;
+}
+
+.unmatch {
+  background-color: rgb(240, 28, 28);
+  animation: 2s hideCard linear;
+}
+
+@keyframes hideCard {
+  0%,
+  70% {
+    transform: rotateX(0deg);
   }
-  
-  .card.active img{
+  100% {
+    transform: rotateX(180deg);
+  }
+}
+
+@keyframes hideImage {
+  0%,
+  84% {
     opacity: 1;
   }
-  
-  .unmatch{
-      background-color: rgb(240, 28, 28);
-      border-radius: 5px;
-      animation: 2s hideCard linear;
+  85% {
+    opacity: 0;
   }
-  
-  @keyframes hideCard {
-    0%, 70%{
-      transform: rotateX(0deg);
-    }100%{
-      transform: rotateX(180deg);
-    }
-  }
-  
-  @keyframes hideImage {
-    0%, 84%{
-      opacity: 1;
-    }85%{
-      opacity: 0;
-    }
-  }
+}

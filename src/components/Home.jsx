@@ -1,6 +1,7 @@
 import React from 'react';
 import Placeholder from '../images/image.png'
 import Tictactoepic from '../images/tictactoepic.png'
+import MemoryPic from '../images/memorypic.png'
 import HomeStyles from '../styles/home.module.css'
 import { Link } from 'react-router-dom';
 
@@ -16,8 +17,8 @@ const Home = () => {
           </div>
         </div>
         <div className={HomeStyles.card}>
-        <h1 className={HomeStyles.title}>Valami másik Project</h1>
-          <img src={Placeholder} className={HomeStyles.image} alt="" />
+        <h1 className={HomeStyles.title}>Memória Játék</h1>
+          <img src={MemoryPic} className={HomeStyles.image} alt="" />
           <div className={HomeStyles.buttonGroup}>
           <button><Link className={HomeStyles.Link} to="/Memorygame">Start</Link></button>
           </div>
