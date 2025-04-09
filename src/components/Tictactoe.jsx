@@ -9,7 +9,7 @@ const Tictactoe = () => {
     const [player2, setPlayer2] = useState(null);
     const [gameBoard, setGameBoard] = useState(Array(9).fill(' '));
     const [started, setStarted] = useState(false);
-    const [counter, setCounter] = useState(0); // Corrected variable name
+    const [counter, setCounter] = useState(0); 
 
     const resetGame = () => {
         setWinner(null);
@@ -17,7 +17,7 @@ const Tictactoe = () => {
         setPlayer(null);
         setPlayer2(null);
         setStarted(false);
-        setCounter(0); // Corrected variable name
+        setCounter(0); 
     };
 
     return (
@@ -26,7 +26,7 @@ const Tictactoe = () => {
             <div className={TictactoeStyles.gameBoard}>
                 <Board
                     counter={counter}
-                    setCounter={setCounter} // Corrected variable name
+                    setCounter={setCounter}
                     board={gameBoard}
                     started={started}
                     winner={winner}
@@ -44,21 +44,11 @@ const Tictactoe = () => {
             </div>
             <div className={TictactoeStyles.buttonGroup}>
                 <div>
-                    <button
-                        className={`${TictactoeStyles.button} ${player === null ? TictactoeStyles.disabled : ''}`}
-                        onClick={() => setStarted(true)}
-                        disabled={player === null}
-                    >
-                        Start
-                    </button>
-                    <button className={TictactoeStyles.button} onClick={resetGame}>
-                        <Link className={TictactoeStyles.Link} to="/Home">Vissza</Link>
-                    </button>
+                    <button className={`${TictactoeStyles.button} ${player === null ? TictactoeStyles.disabled : ''}`} onClick={() => setStarted(true)} disabled={player === null}>Start</button>
+                    <button className={TictactoeStyles.button} onClick={resetGame}><Link className={TictactoeStyles.Link} to="/Home">Vissza</Link></button>
                 </div>
                 <div>
-                    <button className={TictactoeStyles.button} onClick={resetGame} disabled={player === null}>
-                        Új játék
-                    </button>
+                    <button className={TictactoeStyles.button} onClick={resetGame} disabled={player === null}>Új játék</button>
                 </div>
                 
                 <h3 className={TictactoeStyles.buttonText}>Jelenlegi játékos karaktere:</h3>

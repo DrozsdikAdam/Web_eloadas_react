@@ -1,5 +1,4 @@
-import React from 'react';
-import Placeholder from '../images/image.png'
+import React from 'react'
 import Tictactoepic from '../images/tictactoepic.png'
 import MemoryPic from '../images/memorypic.png'
 import HomeStyles from '../styles/home.module.css'

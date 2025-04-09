@@ -21,11 +21,9 @@ const Board = (props) => {
 
         const newBoard = [...props.board];
         newBoard[index] = currentPlayer;
-        if (currentPlayer === "X") {
-            cellRefs.current[index].classList.add(BoardStyles.rotate);
-        } else {
-            cellRefs.current[index].classList.add(BoardStyles.rotateBack);
-        }
+        
+        if (currentPlayer === "X")cellRefs.current[index].classList.add(BoardStyles.rotate);
+        else cellRefs.current[index].classList.add(BoardStyles.rotateBack);
         
 
         setTimeout(() => {
@@ -48,19 +46,17 @@ const Board = (props) => {
     };
 
     const checkWinner = (board) => {
-        // Check rows
         for (let i = 0; i < 3; i++) {
             if (board[i*3] !== " " && board[i*3] === board[i*3 + 1] && board[i*3] === board[i*3 + 2]) {
-                return board[i*3]; // <--- CORRECT: Returning the character
+                return board[i*3]; 
             }
             if (board[i] !== " " && board[i] === board[i + 3] && board[i] === board[i + 6]) {
-                return board[i]; // <--- CORRECT: Returning the character
+                return board[i]; 
             }
         }
         if (board[0] !== " " && board[0] === board[4] && board[0] === board[8])return board[0];
         if (board[2] !== " " && board[2] === board[4] && board[2] === board[6])return board[2];
 
-        // Check for draw
         if (props.counter === 8) return '=';
         return null;
     };
@@ -69,14 +65,8 @@ const Board = (props) => {
         <>
             <div className={BoardStyles.board}>
                 {props.board.map((cell, index) => (
-                    <p
-                        key={index}
-                        className={`${BoardStyles.cell} ${props.started === false ? BoardStyles.disabled : ""}`}
-                        ref={(el) => (cellRefs.current[index] = el)}
-                        onClick={() => handleClick(index)}
-                    >
-                        {cell}
-                    </p>
+                    <p key={index} className={`${BoardStyles.cell} ${props.started === false ? BoardStyles.disabled : ""}`}
+                    ref={(el) => (cellRefs.current[index] = el)} onClick={() => handleClick(index)}>{cell}</p>
                 ))}
             </div>
         </>
