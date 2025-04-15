@@ -77,7 +77,7 @@ const Memory = () => {
     setSteps(Steps + 1);
     if (index !== previousIndex.current) {
       if (cards[index].status === "active matched") {
-        alert("already matched");
+        alert("Már van egyezés");
       } else {
         if (previousCardState === -1) {
           previousIndex.current = index;
@@ -90,7 +90,7 @@ const Memory = () => {
         }
       }
     } else {
-      alert("card currently seleted");
+      alert("A kártya jelenleg ki van jelölve");
     }
   };
 
